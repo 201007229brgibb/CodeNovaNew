@@ -16,7 +16,7 @@ public class DatabaseConector
     //default connection
 	public DatabaseConector()
 	{
-        conn = new SqlConnection("Data Source=.\\SQLEXPRESS;AttachDbFilename='C:\\Users\\Brad Gibb\\Documents\\GitHub\\CodeNova\\WebSite3\\App_Data\\NovaDB.mdf';Integrated Security=True;User Instance=True");
+        conn = new SqlConnection("Data Source=.\\SQLEXPRESS;AttachDbFilename='|DataDirectory|\\NovaDB.mdf';Integrated Security=True;User Instance=True");
         cmd = new SqlCommand();
         cmd.Connection = conn;
 	}
