@@ -30,7 +30,7 @@ public partial class Register : System.Web.UI.Page
 
             string cmdText = "INSERT INTO Users VALUES('" + txtUserName.Text + "', '"
             + txtEmail.Text + "', '"
-            + hash.hash(txtPassword.Text) + "', '"
+            + txtPassword.Text + "', '"
             + txtFName.Text + "', '"
             + txtLName.Text + "', "
             + lstTitle.SelectedValue + ", '"

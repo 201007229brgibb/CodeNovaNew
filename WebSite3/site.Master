@@ -7,39 +7,150 @@
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .title
+        {
+            background-color: Black;
+        }
+        .main { background-image : url('../backgroundImages/frozen_water_drops-wallpaper-1920x1200.jpg');
+        }
+        .hideSkiplink
+        {
+            text-align: center;
+        }
+        .loginDisplay
+        {
+            text-align: center;
+        }
+        .menu
+        {
+            text-align: right;
+        }
+        .menu
+        {
+            color: #FF3300;
+        }
+        .style1
+        {
+            width: 296px;
+            height: 21px;
+        }
+        .style2
+        {
+            width: 104px;
+            height: 21px;
+        }
+        .style3
+        {
+            font-family: Century;
+        }
+        .style4
+        {
+            width: 298px;
+            height: 21px;
+        }
+        .title
+        {
+            text-align: center;
+        }
+        .style5
+        {
+            height: 41px;
+            width: 415px;
+        }
+        .style8
+        {
+            height: 41px;
+            width: 423px;
+        }
+        .style9
+        {
+            width: 423px;
+        }
+        .style10
+        {
+            color : Red;
+            height: 41px;
+            width: 647px;
+            text-align: center;
+        }
+        .style11
+        {
+            width: 647px;
+        }
+    </style>
 </head>
 <body>
     <form runat="server">
     <div class="page">
         <div class="header">
             <div class="title">
-                <h1>
-                    Code Nova
-                </h1>
+                  
+       <table>
+            <tr>
+            <td class="style5">
+                </td>
+ 
+            <td class="style10"><h1 style="text-align: center; font-size: xx-large;" class="style3">Nova Cars.co.za </h1>
+                </td>
+            <td class="style8">
+                </td>
+            <td class="style5">
+                &nbsp;</td>
+
+            <td class="style11"><image src = " BackgroundImages/Animated_Sun.gif " alt="Animated_Sun.gif" height="140" width="140"  ></image>
+                &nbsp;</td>
+            <td class="style9">
+                &nbsp;</td>
+        </tr>       
+</table>
+
+                
             </div>
-            <div class="loginDisplay">
-                <asp:Literal ID="litLogin" runat="server"></asp:Literal>
-            </div>
-            <div class="clear hideSkiplink">
-                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
-                    <Items>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
-                        <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Login"/>
-                        <asp:MenuItem NavigateUrl="~/Register.aspx" Text="Register"/>
-                    </Items>
-                </asp:Menu>
+            <div class="clearhideSkiplink">
+                <table style="width: 1136px">
+                    <tr>
+                        <td class="style1">
+                            </td>
+                        <td class="style4" style="text-align: left; font-size: x-large;">
+                        <table>
+                            <tr><td><a href="Default.aspx">Home</a></td><td><a href="About.aspx">About Us</a></td>
+                            <td><a href="Login.aspx">Log In</a></td><td><a href="Register.aspx">Register</a></td></tr>
+                            <tr><td><a href="Catalog.aspx">Catalog</a></td><td><a href="ProdAdd.aspx">Add Products</a></td></tr>
+                        </table>
+
+
+                        <asp:Literal ID="litLogin" runat="server"></asp:Literal>
+                        <asp:Button ID="btnLogOut" runat="server" Text="LogOut" onclick="btnLogOut_Click" />
+                        <asp:Button ID="btnCheckOut" runat="server" Text="Checkout" 
+                                onclick="btnCheckOut_Click" />
+
+                        </td>
+                        <td class="style2">
+                            </td>
+                    </tr>
+                </table>
+
+
             </div>
         </div>
   
         <div class="main">
             <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+
+
+
+
+
+
+
         </div>
         <div class="clear">
         </div>
     </div>
     <div class="footer">
         <asp:ContentPlaceHolder ID="FooterContent" runat="server" />
+        <p class="right"><%: DateTime.Now.Year%> - NovaCars.co.za&copy;</p>
     </div>
     </form>
 </body>

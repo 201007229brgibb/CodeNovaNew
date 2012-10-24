@@ -27,12 +27,16 @@ public partial class Login : System.Web.UI.Page
         {
             reader.Read();
             string pass = (string)reader["User_Password"];
-            string hashed = hash.hash(txtPassword.Text);
+            string hashed = txtPassword.Text; //hash.hash(txtPassword.Text);
+                                              //not hashing as the data is corrupted in the process of sending the hashed string to the database
             if (hashed.Equals(pass))
             {
-                Session.Add("LoggedIn", true);
+                Session["Logged"] = true;
+                Session["UserID"] = txtUserName.Text;
+                Session["Admin"] = Convert.ToBoolean(reader["User_AdminRight"]);
                 Response.Redirect("Default.aspx");
             }
         }
+        connect.close();
     }
 }

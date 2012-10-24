@@ -8,6 +8,9 @@
         About
     </h2>
     <p>
-        Put content here.
+        NovaCars gives u a space to sell that old heap and buy yourself a shiny new swt of wheels.
+    </p>
+    <p>
+        Register and upload your car and purchase others, or just browse our online catalog as a guest.
     </p>
 </asp:Content>

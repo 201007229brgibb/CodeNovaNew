@@ -7,30 +7,97 @@
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .title
+        {
+            background-color: Black;
+        }
+        .hideSkiplink
+        {
+            text-align: center;
+        }
+    .style6
+    {
+        width: 426px;
+    }
+        .style7
+        {
+            width: 183px;
+        }
+        .style11
+        {   color: Red;
+            width: 416px;
+        }
+        .style12
+        {
+            width: 217px;
+        }
+        .style13
+        {
+            width: 361px;
+        }
+        .style14
+        {
+            width: 454px;
+        }
+    </style>
 </head>
 <body>
     <form id="Form1" runat="server">
     <div class="page">
         <div class="header">
             <div class="title">
-                <h1>
-                    Code Nova
-                </h1>
+                    
+                  
+       <table>
+            <tr>
+            <td class="style14">
+                </td>
+ 
+            <td class="style11"><h1 style="text-align: center; font-size: xx-large;" class="style3">Code Nova</h1>
+                </td>
+            <td class="style13">
+                </td>
+            <td class="style14">
+                &nbsp;</td>
+
+            <td class="style11"><image src = " BackgroundImages/Animated_Sun.gif " alt="Animated_Sun.gif" height="140" width="140"  ></image>
+                &nbsp;</td>
+            <td class="style13">
+                &nbsp;</td>
+        </tr>       
+</table>
+
             </div>
             <div class="loginDisplay">
             </div>
             <div class="clear hideSkiplink">
-                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
-                    <Items>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
-                    </Items>
-                </asp:Menu>
+            <table style="width: 1136px">
+                    <tr>
+                        <td class="style1">
+                            </td>
+                        <td class="style4" style="text-align: left; font-size: x-large;">
+                        <table>
+                            <tr><td><a href="Default.aspx">Home</a></td><td><a href="About.aspx">About Us</a></td>
+                            <td><a href="Login.aspx">Log In</a></td><td><a href="Register.aspx">Register</a></td></tr>
+                        </table>
+
+
+                <asp:Literal ID="litLogin" runat="server"></asp:Literal>
+
+
+                        </td>
+                        <td class="style2">
+                            </td>
+                    </tr>
+                </table>
             </div>
         </div>
   
         <div class="main">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                
+            </asp:ContentPlaceHolder>
         </div>
         <div class="clear">
         </div>
